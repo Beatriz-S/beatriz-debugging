@@ -1,37 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Standard HTML5 meta tags -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link to external CSS stylesheet -->
     <link href="index.css" rel="stylesheet" />
     <title>Number Guesser</title>
   </head>
   <body>
     <main>
+      <!-- Game title and instructions -->
       <h1>Guessing Game</h1>
       <p>
         I'm thinking of a number from 1 to 99! Can you guess it in 5 tries or
         less?
       </p>
+      
+      <!-- User input section: number input field and submit button -->
       <div>
         <input type="number" id="guess" min="1" max="99" />
         <button id="submit">Submit Guess</button>
       </div>
+      
+      <!-- Feedback messages section: displays game status and hints -->
       <div>
+        <!-- Shows number of guesses made or remaining -->
         <p class="message" id="number-of-guesses"></p>
+        <!-- Message displayed when guess is too high -->
         <p class="message" id="too-high">You guessed too high. Try again.</p>
+        <!-- Message displayed when guess is too low -->
         <p class="message" id="too-low">You guessed too low. Try again.</p>
+        <!-- Message displayed when max attempts reached -->
         <p class="message" id="max-guesses">
           You reached the max number of guesses
         </p>
+        <!-- Success message displayed when user guesses correctly -->
         <p class="message" id="correct">
           Congratulations, You guessed correctly! <br />
           Would you like to play again?
         </p>
       </div>
+      
+      <!-- Reset button to start a new game -->
       <button id="reset">Reset</button>
     </main>
+    
+    <!-- Link to JavaScript file that contains game logic -->
     <script src="index.js"></script>
   </body>
 </html>
