@@ -33,6 +33,12 @@ function getRandomNumber(min, max) {
 function checkGuess() {
   // Get value from guess input element and convert to integer
   const guess = parseInt(guessInput.value, 10);
+  
+  // Validate input: ensure it's a number between 1 and 99
+  if (Number.isNaN(guess) || guess < 1 || guess > 99) {
+    return;
+  }
+  
   attempts = attempts + 1;
 
   // Hide all messages before showing the relevant one
